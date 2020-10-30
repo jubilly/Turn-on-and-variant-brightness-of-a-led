@@ -1,0 +1,61 @@
+{
+	"folders": [
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Meu Projet - IC"
+		},
+		{
+			"name": "Atividade Embarcados",
+			"path": "C:\\Users\\Amanda Prates\\Documents\\PlatformIO\\Projects\\Atividade Embarcados"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Botoes"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Botoes Split Part"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Codigo_para_criação_de_botões_em_jquery"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\lamp-iot"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Teste Range"
+		},
+		{
+			"name": "Potenciometro",
+			"path": "C:\\Users\\Amanda Prates\\Documents\\PlatformIO\\Projects\\Potenciometro"
+		},
+		{
+			"name": "SensorCapacitivo",
+			"path": "C:\\Users\\Amanda Prates\\Documents\\PlatformIO\\Projects\\SensorCapacitivo"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\PlatformIO\\Projects\\teste"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Projeto Teste"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\lamp-iot - Copia"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Teste"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Downloads\\Arduino-J5-master"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Testes"
+		},
+		{
+			"path": "C:\\Users\\Amanda Prates\\Documents\\Desenvolvimento\\Projeto"
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"PATH": "C:\\Users\\Amanda Prates\\.platformio\\penv\\Scripts;C:\\Users\\Amanda Prates\\.platformio\\penv;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\Amanda Prates\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Amanda Prates\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Amanda Prates\\AppData\\Roaming\\npm;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Users\\Amanda Prates\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Amanda Prates\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Amanda Prates\\AppData\\Roaming\\npm",
+			"PLATFORMIO_CALLER": "vscode"
+		}
+	}
+}

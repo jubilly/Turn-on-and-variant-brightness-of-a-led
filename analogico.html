@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Analógico</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/range-touch/master/demo/style.css">
+    <link href="css/analogico.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="divPrincipal">
+        <table>
+            <tr>
+                    <td><label>Entradas Analógica: <input type="numeric" id="quantidade" /></label></br></td>
+                    <td><button id="buttonn">Gerar</button></td>
+                <script src='analogico.js'></script>
+            </tr>
+            <tr> <td><label>Digite um valor entre 0 a 255</label></td></tr>
+        </table>
+    </div>
+    <div id="divcriacao">
+            
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+            <input type="range" min="0" max="255" value="0" id="analogico">Value: <span id="demo"></span></p> 
+
+        <!--os botões serão inseridos aqui nessa div-->
+    </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-messaging.js"></script>
+  </div>
+  <script>
+     var config = {
+            apiKey: "AIzaSyAWUY7Gktc6TPJugr0vQQ-RZ4XCF_EhBJM",
+            authDomain: "iot-tutorial-c4c86.firebaseapp.com",
+            databaseURL: "https://iot-tutorial-c4c86.firebaseio.com",
+            storageBucket: "iot-tutorial-c4c86.appspot.com",
+      };
+      firebase.initializeApp(config);
+    
+      let analogico = document.querySelector('#analogico');
+        analogico.addEventListener('click', ()=>{
+            var slider = document.getElementById("analogico");
+            var output = document.getElementById("demo");
+        
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+            var out = output.innerHTML;
+            console.log(out);
+            var outt = parseInt(out);
+            outt = parseInt(out);
+                for(let i =0; i <=255; i++){
+                    if(i == outt){
+                        firebase.database().ref('analogico').set(i);
+                    }
+                } 
+            }   
+        });
+      firebase.database().ref('analogico').on('value', snapshot =>{
+            var slider = document.getElementById("analogico");
+            var output = document.getElementById("demo");
+        
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+            var out = output.innerHTML;
+            console.log(out);
+            var outt = parseInt(out);
+            outt = parseInt(out);
+                for(let i =0; i <=255; i++){
+                    if(i == outt){
+                        firebase.database().ref('analogico').set(i);
+                    }
+                } 
+            }   
+        });
+  </script>
+</body>
+
+</html>

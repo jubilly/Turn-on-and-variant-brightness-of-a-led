@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <meta charset=”UTF-8″>
+    <title>Câmera</title>
+</head>
+
+<body>
+
+    <video></video>
+
+    <script>
+    navigator.mediaDevices.getUserMedia({video: true, audio: true}).then(
+
+    function(stream) {
+    var video = document.querySelector('video');
+    video.srcObject = stream;
+    video.play();
+    })
+    </script>
+
+</body>
+
+</html>

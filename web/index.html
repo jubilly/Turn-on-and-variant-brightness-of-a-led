@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Digital</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-messaging.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="principal">
+        <td><label>Entrada(s): <input type="numeric" id="quantidade" /></label> <input type="submit" id="button" value= "Gerar"></td>
+        <script >
+            function addNewBtn(){
+                $("#secundaria").append('<button id="lampada" data-state="off" alt="off" > Led 01 </button>');
+            }
+             /* let botao = document.querySelector('#button');
+             botao.addEventListener('click', ()=>{
+                var a = $("#quantidade").val();
+                var numero = parseInt(a);
+                for (var b = 0; b < numero; b++) {
+               //    $('#secundaria').append(" <button id='lampada'" + " data-state='' " + '>' + "Led 01 </button>");   
+                $('#secundaria').append('<button id="lampada" data-state="off" alt="off" > Led 01 </button>');   
+                }
+             }); */
+        </script>
+    </div>     
+    <div id="secundaria">
+    <!--<button onclick="addNewBtn()">Adicione outro botão !</button>-->
+    <table>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 01 </button></td>
+        </tr>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 02 </button></td>
+        </tr>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 03 </button></td>
+        </tr>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 04 </button></td>
+        </tr>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 05 </button></td>
+        </tr>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 06 </button></td>
+        </tr>
+        <tr>
+                <td><button id="lampada" data-state="off" alt="">Led 07 </button></td>
+        </tr>
+        
+    </table>
+    </div>   
+    <script>
+       var config = {
+              apiKey: "AIzaSyAWUY7Gktc6TPJugr0vQQ-RZ4XCF_EhBJM",
+              authDomain: "iot-tutorial-c4c86.firebaseapp.com",
+              databaseURL: "https://iot-tutorial-c4c86.firebaseio.com",
+              storageBucket: "iot-tutorial-c4c86.appspot.com",
+        };
+        firebase.initializeApp(config);
+        
+        let lampada = document.querySelector('#lampada');
+        lampada.addEventListener('click', ()=>{
+            let estado = lampada.getAttribute('data-state');
+            if(estado == 'off'){
+                firebase.database().ref('lampada').set('on');
+                
+            }else{
+                firebase.database().ref('lampada').set('off');
+            }
+        });
+        firebase.database().ref('lampada').on('value', snapshot =>{
+            let l = snapshot.val();
+            if(l == 'on'){
+                lampada.setAttribute('id', 'on');
+                lampada.setAttribute('data-state', 'on');
+            }else{
+                lampada.setAttribute('id', 'off');
+                lampada.setAttribute('data-state', 'off');
+            }
+        })
+    </script>
+</body>
+
+</html>
